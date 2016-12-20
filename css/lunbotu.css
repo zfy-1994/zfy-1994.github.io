@@ -1,0 +1,55 @@
+
+
+#header h1{
+	font-size: 28px;
+	font-weight: 300px;
+	font-family: "Helvetica", sans-serif;
+	line-height: 54px;
+	letter-spacing: 3px;
+	height: 56px;
+	margin: 0;
+	display: inline-block;
+	white-space: nowrap;
+}
+#header a{
+	color: #fff;
+	text-decoration: none;
+}
+.ribbon{
+	background-color: rgb(24, 137, 197);; /* background color for center of ribbon */
+	border: 3px solid #eee; /* border color for center of ribbon */
+	height: 56px;
+	padding: 0 20px;
+	display: inline-block;
+	position: relative;
+	margin-left: 56px;
+	margin-top: 30px;
+}
+
+
+
+.tooltips{width: 1002px;height: 550px;border: 1px solid #eee;
+           margin: 50px auto;}
+#block-hobbies{overflow: hidden;
+background:url(1.jpg);
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;}
+.tooltips-tab{height: 50px;
+    
+}
+.notice{width: 1003px;}
+.tooltips-tab li {float: left;width: 200px;height: 49px;
+                  text-align: center;overflow: hidden;background: #FFF;
+                  border-bottom: 1px solid #eee;line-height: 49px;}
+.active{border-left: 1px solid #d0d6d9;
+        border-right: 1px solid #d0d6d9; font-weight:bold;}
+.tooltips-tab li a:link,.tooltips-tab li a:visited{text-decoration: none;
+ color: #000;}
+.tooltips-tab li a:hover{color: #F90;}
+.picture{width: 100%;height: 500px; overflow: hidden;position:relative;
+	left: 1px;}
+.pic{position: absolute;}
+.picture li{height: 500px;}
+

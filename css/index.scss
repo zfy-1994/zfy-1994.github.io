@@ -1,0 +1,129 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?cyarg6');
+  src:  url('fonts/icomoon.eot?cyarg6#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?cyarg6') format('truetype'),
+    url('fonts/icomoon.woff?cyarg6') format('woff'),
+    url('fonts/icomoon.svg?cyarg6#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-qrcode:before {
+  content: "\e938";
+}
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-shift:before {
+  content: "\ea4f";
+}
+.icon-mail4:before {
+  content: "\ea86";
+}
+
+
+
+@mixin transition($transition){
+  -webkit-transition:$transition;
+  -moz-transition:$transition;
+  -o-transition:$transition;
+  -ms-transition:$transition;
+  transition:$transition;
+} 
+@mixin transform-origin($origin){
+  -webkit-transform-origin:$origin;
+  -moz-transform-origin:$origin;
+  -o-transform-origin:$origin;
+  -ms-transform-origin:$origin;
+  transform-origin:$origin;
+ }
+@mixin scale($scale)
+{-webkit-transform:scale($scale);
+  -moz-transform:scale($scale);
+  -o-transform:scale($scale);
+  -ms-transform:scale($scale);
+  transform:scale($scale);
+}
+@mixin opacity($opacity){
+  opacity:$opacity;
+  filter:alpha(opacity=0);
+}
+
+
+$toolbar-size: 52px;
+.toolbar-item ,.toolbar-btn,.toolbar-icon,
+.toolbar-text{ width: $toolbar-size;
+height: $toolbar-size;}
+
+.toolbar
+{position: fixed;
+right: 25px;
+bottom: 5px;
+}
+.toolbar-item
+{
+  position: relative;display: block;
+  margin-top: 1px;
+
+ &:hover {
+             .toolbar-icon {top:-$toolbar-size}
+             .toolbar-text{top: 0;}  
+             .toolbar-weixin{@include opacity(1);
+                              @include scale(1);}
+          }
+}
+.toolbar-btn{position: absolute;left: 0;
+  top: 0;overflow: hidden;
+}
+.toolbar-icon{position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #d0d6d9;
+  font-size: 30px;
+  color:#063b9e;
+  text-align: center;
+  line-height:$toolbar-size;
+  @include transition(top 1s);
+}
+.toolbar-text{
+  position: absolute;
+  left: 0;
+  top:$toolbar-size;
+  background-color: #98a1a6;
+  font-size: 12px;
+  padding-top:12px; 
+  color:#fff;
+  text-align: center;
+  line-height:1.2;
+  @include transition(top 1s);
+}
+.toolbar-weixin{
+position:absolute;right:$toolbar-size;
+bottom:-1px;
+width:220px;
+height:220px;
+background-image: url(4232.png);
+background-repeat:no-repeat;
+background-size: cover;
+background-position: center;
+@include opacity(0);
+@include transform-origin(95% 95%);
+@include scale(0.01);
+@include transition(all 1s);
+}
