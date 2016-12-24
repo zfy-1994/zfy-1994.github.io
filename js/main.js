@@ -8,7 +8,9 @@ requirejs(['jquery'], function ($) {
 
 //首页满屏
   $("#block-intro-one").css("height", $(window).height());
-
+// 首页动画
+  var gao=($(window).height()/2-120) +'px';
+  $(".banner").css('top',gao);
 //页面刷新
   $(".logo").on("click",refresh);
 function refresh(){ window.location.reload(); }
