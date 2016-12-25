@@ -16,7 +16,7 @@ requirejs(['jquery'], function ($) {
 function refresh(){ window.location.reload(); }
 	
 //平滑过渡	
-   $('.fstPage-down a,.fr a,button a').on('click',next);
+   $('.fstPage-down a,.fr a').on('click',next);
     function next()
     {
     	var $anchor = $(this);
@@ -24,8 +24,15 @@ function refresh(){ window.location.reload(); }
        // attr返回属性；offset返回目标相对于dom的位置
     }
 
-	
-	
+   $('.shake-vertical').on('click',bt);
+   function bt(){
+   	$('html, body').animate({scrollTop: $("#block-intro").offset().top}, 600);
+   }
+	$(".one,.two").on('click',function(){
+		$(".phone,.phone-two").css('color','#F90');
+	})
+
+
 
 //返回顶部函数	
 $('#backtop').on('click',move);
